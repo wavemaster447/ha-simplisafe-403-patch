@@ -1,0 +1,27 @@
+{
+    "config": {
+        "abort": {
+            "reauth_successful": "Berrautortzea arrakastatsua izan da"
+        },
+        "error": {
+            "invalid_auth": "Autentifikazio baliogabea",
+            "unknown": "Ustekabeko errorea"
+        }
+    },
+    "services": {
+        "set_pin": {
+            "fields": {
+                "pin": {
+                    "name": "PINa"
+                }
+            }
+        },
+        "set_system_properties": {
+            "fields": {
+                "alarm_duration": {
+                    "name": "Alarma-iraupena"
+                }
+            }
+        }
+    }
+}

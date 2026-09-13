@@ -1,0 +1,137 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Ce compte SimpliSafe est d\u00e9j\u00e0 utilis\u00e9.",
+            "reauth_successful": "La r\u00e9authentification a r\u00e9ussi",
+            "wrong_account": "Les informations d'identification d'utilisateur fournies ne correspondent pas \u00e0 ce compte SimpliSafe."
+        },
+        "error": {
+            "identifier_exists": "Compte d\u00e9j\u00e0 enregistr\u00e9",
+            "invalid_auth": "Authentification non valide",
+            "invalid_auth_code_length": "Les codes d'autorisation SimpliSafe ont une longueur de 45 caract\u00e8res",
+            "unknown": "Erreur inattendue"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "auth_code": "Code d'autorisation"
+                },
+                "description": "SimpliSafe authentifie les utilisateurs via son application Web. En raison de limitations techniques, il y a une \u00e9tape manuelle \u00e0 la fin de ce processus\u00a0; veuillez vous assurer de lire la [documentation]({documentation_url}) avant de commencer.\n\nLorsque vous \u00eates pr\u00eat, cliquez [ici]({url}) pour ouvrir l'application Web SimpliSafe et saisir vos informations d'identification. Si vous \u00eates d\u00e9j\u00e0 connect\u00e9 \u00e0 SimpliSafe dans votre navigateur, vous pouvez ouvrir un nouvel onglet, puis copier/coller l'URL ci-dessus dans cet onglet.\n\nUne fois le processus termin\u00e9, revenez ici et saisissez le code d'autorisation \u00e0 partir de l'URL `com.simplisafe.mobile`."
+            }
+        }
+    },
+    "entity": {
+        "button": {
+            "clear_notifications": {
+                "name": "Effacer les notifications"
+            }
+        }
+    },
+    "exceptions": {
+        "error_while_executing": {
+            "message": "Erreur lors de l'ex\u00e9cution de \u00ab\u00a0{service}\u00a0\u00bb\u00a0: {error}"
+        },
+        "invalid_device_id": {
+            "message": "Aucun appareil n'a \u00e9t\u00e9 trouv\u00e9 pour l'ID\u00a0: {device_id}"
+        },
+        "no_base_station": {
+            "message": "Aucune station de base n'a \u00e9t\u00e9 trouv\u00e9e pour l'ID d'appareil\u00a0: {device_id}"
+        },
+        "no_system_for_device": {
+            "message": "Aucun syst\u00e8me SimpliSafe n'a \u00e9t\u00e9 trouv\u00e9 pour l'ID d'appareil\u00a0: {device_id}"
+        },
+        "set_system_properties_not_v3": {
+            "message": "Les propri\u00e9t\u00e9s du syst\u00e8me ne peuvent \u00eatre d\u00e9finies que sur les syst\u00e8mes V3."
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "data": {
+                    "code": "Code (utilis\u00e9 dans l'interface utilisateur de Home Assistant)"
+                },
+                "title": "Configurer SimpliSafe"
+            }
+        }
+    },
+    "services": {
+        "remove_pin": {
+            "description": "Supprime un code PIN par son libell\u00e9 ou sa valeur.",
+            "fields": {
+                "device_id": {
+                    "description": "Le syst\u00e8me duquel supprimer le code PIN.",
+                    "name": "Syst\u00e8me"
+                },
+                "label_or_pin": {
+                    "description": "Le libell\u00e9/la valeur \u00e0 supprimer.",
+                    "name": "Libell\u00e9/PIN"
+                }
+            },
+            "name": "Supprimer le code PIN"
+        },
+        "set_pin": {
+            "description": "D\u00e9finit/met \u00e0 jour un code PIN.",
+            "fields": {
+                "device_id": {
+                    "description": "Le syst\u00e8me sur lequel d\u00e9finir le code PIN.",
+                    "name": "Syst\u00e8me"
+                },
+                "label": {
+                    "description": "Le libell\u00e9 du code PIN.",
+                    "name": "Libell\u00e9"
+                },
+                "pin": {
+                    "description": "La valeur du code PIN.",
+                    "name": "PIN"
+                }
+            },
+            "name": "D\u00e9finir le code PIN"
+        },
+        "set_system_properties": {
+            "description": "D\u00e9finit une ou plusieurs propri\u00e9t\u00e9s du syst\u00e8me.",
+            "fields": {
+                "alarm_duration": {
+                    "description": "La dur\u00e9e d'une alarme d\u00e9clench\u00e9e.",
+                    "name": "Dur\u00e9e de l'alarme"
+                },
+                "alarm_volume": {
+                    "description": "Le volume d'une alarme d\u00e9clench\u00e9e.",
+                    "name": "Volume de l'alarme"
+                },
+                "chime_volume": {
+                    "description": "Le niveau de volume du carillon de porte.",
+                    "name": "Volume du carillon"
+                },
+                "device_id": {
+                    "description": "Le syst\u00e8me dont les propri\u00e9t\u00e9s doivent \u00eatre d\u00e9finies.",
+                    "name": "Syst\u00e8me"
+                },
+                "entry_delay_away": {
+                    "description": "D\u00e9lai d'attente lors de l'entr\u00e9e en mode \u00ab\u00a0absent\u00a0\u00bb.",
+                    "name": "D\u00e9lai d'entr\u00e9e en mode absent"
+                },
+                "entry_delay_home": {
+                    "description": "D\u00e9lai d'attente lors de l'entr\u00e9e en mode \u00ab\u00a0pr\u00e9sent\u00a0\u00bb.",
+                    "name": "D\u00e9lai d'entr\u00e9e en mode pr\u00e9sent"
+                },
+                "exit_delay_away": {
+                    "description": "D\u00e9lai d'attente lors de la sortie en mode \u00ab\u00a0absent\u00a0\u00bb.",
+                    "name": "D\u00e9lai de sortie en mode absent"
+                },
+                "exit_delay_home": {
+                    "description": "D\u00e9lai d'attente lors de la sortie en mode \u00ab\u00a0pr\u00e9sent\u00a0\u00bb.",
+                    "name": "D\u00e9lai de sortie en mode pr\u00e9sent"
+                },
+                "light": {
+                    "description": "Indique si le voyant d'armement doit \u00eatre visible.",
+                    "name": "Voyant"
+                },
+                "voice_prompt_volume": {
+                    "description": "Le niveau de volume de l'invite vocale.",
+                    "name": "Volume de l'invite vocale"
+                }
+            },
+            "name": "D\u00e9finir les propri\u00e9t\u00e9s du syst\u00e8me"
+        }
+    }
+}

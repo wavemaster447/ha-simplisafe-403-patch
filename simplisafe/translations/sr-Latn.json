@@ -1,0 +1,137 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Ovaj SimpliSafe nalog je ve\u0107 u upotrebi.",
+            "reauth_successful": "Ponovna prijava je uspe\u0161na",
+            "wrong_account": "Navedeni korisni\u010dki pristupni podaci ne odgovaraju ovom SimpliSafe nalogu."
+        },
+        "error": {
+            "identifier_exists": "Nalog je ve\u0107 registrovan",
+            "invalid_auth": "Neva\u017ee\u0107i podaci za prijavu",
+            "invalid_auth_code_length": "Kodovi za odobrenje za SimpliSafe imaju du\u017einu od 45 karaktera",
+            "unknown": "Neo\u010dekivana gre\u0161ka"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "auth_code": "Kod za odobrenje"
+                },
+                "description": "SimpliSafe potvr\u0111uje korisnike putem va\u0161e web aplikacije. Zbog tehni\u010dkih ograni\u010denja, na kraju ovog procesa postoji ru\u010dni korak; obavezno pro\u010ditajte [dokumentaciju]({documentation_url}) pre nego \u0161to zapo\u010dnete.\n\nKada budete spremni, kliknite [ovde]({url}) da otvorite SimpliSafe web aplikaciju i unesete va\u0161e podatke za prijavu. Ako ste ve\u0107 prijavljeni na SimpliSafe u pregleda\u010du, mo\u017eda \u0107ete \u017eeleti da otvorite novu karticu i zatim kopirate/nalepite gornji URL u tu karticu.\n\nKada se proces zavr\u0161i, vratite se ovde i unesite autorizacioni kod iz `com.simplisafe.mobile` URL\u2011a."
+            }
+        }
+    },
+    "entity": {
+        "button": {
+            "clear_notifications": {
+                "name": "Obri\u0161i obave\u0161tenja"
+            }
+        }
+    },
+    "exceptions": {
+        "error_while_executing": {
+            "message": "Gre\u0161ka prilikom izvr\u0161avanja \u201e{service}\u201c: {error}"
+        },
+        "invalid_device_id": {
+            "message": "Nije prona\u0111en nijedan ure\u0111aj za ID: {device_id}"
+        },
+        "no_base_station": {
+            "message": "Nije prona\u0111ena bazna stanica za ID ure\u0111aja: {device_id}"
+        },
+        "no_system_for_device": {
+            "message": "Nije prona\u0111en nijedan SimpliSafe sistem za ID ure\u0111aja: {device_id}"
+        },
+        "set_system_properties_not_v3": {
+            "message": "Svojstva sistema se mogu podesiti samo na V3 sistemima."
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "data": {
+                    "code": "Kod (koristi se u Home Assistant interfejsu)"
+                },
+                "title": "Konfiguri\u0161i SimpliSafe"
+            }
+        }
+    },
+    "services": {
+        "remove_pin": {
+            "description": "Uklanja PIN prema njegovoj oznaci ili vrednosti.",
+            "fields": {
+                "device_id": {
+                    "description": "Sistem sa kojeg \u017eelite ukloniti PIN.",
+                    "name": "Sistem"
+                },
+                "label_or_pin": {
+                    "description": "Oznaka/vrednost koju \u017eelite ukloniti.",
+                    "name": "Oznaka/PIN"
+                }
+            },
+            "name": "Ukloni PIN"
+        },
+        "set_pin": {
+            "description": "Postavlja/a\u017eurira PIN.",
+            "fields": {
+                "device_id": {
+                    "description": "Sistem na kojem se postavlja PIN.",
+                    "name": "Sistem"
+                },
+                "label": {
+                    "description": "Oznaka za PIN.",
+                    "name": "Oznaka"
+                },
+                "pin": {
+                    "description": "Vrednost PIN koda.",
+                    "name": "PIN"
+                }
+            },
+            "name": "Postavi PIN"
+        },
+        "set_system_properties": {
+            "description": "Postavlja jedno ili vi\u0161e svojstava sistema.",
+            "fields": {
+                "alarm_duration": {
+                    "description": "Trajanje aktiviranog alarma.",
+                    "name": "Trajanje alarma"
+                },
+                "alarm_volume": {
+                    "description": "Nivo ja\u010dine zvuka aktiviranog alarma.",
+                    "name": "Ja\u010dina zvuka alarma"
+                },
+                "chime_volume": {
+                    "description": "Nivo ja\u010dine zvuka za zvono na vratima.",
+                    "name": "Ja\u010dina zvuka signala"
+                },
+                "device_id": {
+                    "description": "Sistem \u010dija svojstva treba podesiti.",
+                    "name": "Sistem"
+                },
+                "entry_delay_away": {
+                    "description": "Trajanje odlaganja prilikom ulaska dok je aktiviran re\u017eim 'odsutan'.",
+                    "name": "Odlaganje ulaska u re\u017eimu 'odsutan'"
+                },
+                "entry_delay_home": {
+                    "description": "Trajanje odlaganja prilikom ulaska dok je aktiviran re\u017eim 'kod ku\u0107e'.",
+                    "name": "Odlaganje ulaska u re\u017eimu 'kod ku\u0107e'"
+                },
+                "exit_delay_away": {
+                    "description": "Trajanje odlaganja prilikom izlaska dok je aktiviran re\u017eim 'odsutan'.",
+                    "name": "Odlaganje izlaska (Odsutan)"
+                },
+                "exit_delay_home": {
+                    "description": "Koliko dugo odlo\u017eiti izlazak u re\u017eimu \u201eku\u0107e\u201c.",
+                    "name": "Ka\u0161njenje izlaska \u2013 re\u017eim ku\u0107e"
+                },
+                "light": {
+                    "description": "Da li treba da bude vidljiva lampica za aktivaciju.",
+                    "name": "Svetlo"
+                },
+                "voice_prompt_volume": {
+                    "description": "Nivo ja\u010dine zvuka glasovnog upita.",
+                    "name": "Ja\u010dina zvuka glasovnog upita"
+                }
+            },
+            "name": "Podesi sistemske osobine"
+        }
+    }
+}
