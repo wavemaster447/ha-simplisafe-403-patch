@@ -62,5 +62,6 @@ If the Auth0 browser login page stalls on the SMS verification code (inert "Cont
 
 ## 🔗 Credits & References
 
+- Code and documentation from Gemini/Antigravity
 - Home Assistant Core Issue: [#178577](https://github.com/home-assistant/core/issues/178577)
 - `simplisafe-python` PR: [bachya/simplisafe-python#1159](https://github.com/bachya/simplisafe-python/pull/1159)
